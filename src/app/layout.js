@@ -3,6 +3,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/theme';
+import AppBar from '@/components/Appbar/NavBar';
 
 export default function RootLayout(props) {
   return (
@@ -12,6 +13,7 @@ export default function RootLayout(props) {
           <ThemeProvider theme={theme}>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
+            <AppBar />
             {props.children}
           </ThemeProvider>
         </AppRouterCacheProvider>
