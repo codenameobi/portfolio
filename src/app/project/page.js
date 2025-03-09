@@ -36,6 +36,17 @@ export default function About() {
                             <ProjectCard />
                         </Grid>
                     </Grid>
+                    <Grid container spacing={2} minHeight={160}>
+                        <Grid display="flex" justifyContent="center" alignItems="center" size="grow">
+                            <ProjectCard />
+                        </Grid>
+                        <Grid display="flex" justifyContent="center" alignItems="center">
+                            <ProjectCard />
+                        </Grid>
+                        <Grid display="flex" justifyContent="center" alignItems="center" size="grow">
+                            <ProjectCard />
+                        </Grid>
+                    </Grid>
                 </Box>
             </Box>
         </Container>
