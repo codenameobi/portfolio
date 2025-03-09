@@ -20,14 +20,13 @@ export default function About() {
         }}
       >
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-          Material UI - Next.js example in TypeScript
+        I am a seasoned Software Developer with extensive experience in Python, JavaScript, Django, .NET, and Next.js. My expertise also includes HTML, CSS, and cloud platforms such as Digital Ocean, AWS, and Azure. I am committed to continuous learning and staying updated with the latest technological advancements.
+
+Currently, I develop, maintain, and enhance web applications for a diverse range of clients, ensuring robust and scalable solutions. I excel in deploying and managing applications on the cloud, focusing on creating intuitive, user-friendly web applications that deliver exceptional user experiences.
+
+As a collaborative team player, I thrive in dynamic environments and consistently strive to deliver high-quality projects. My mindset of continuous improvement, combined with effective communication skills, enables me to advocate for best practices and ensure alignment with business needs and technological advancements.
         </Typography>
-        <Box sx={{ maxWidth: 'sm' }}>
-          <Button variant="contained" component={NextLink} href="/">
-            Go to the home page
-          </Button>
-        </Box>
-        <ProTip />
+        
         <Copyright />
       </Box>
     </Container>
