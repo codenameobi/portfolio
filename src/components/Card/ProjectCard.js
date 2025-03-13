@@ -6,25 +6,25 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function ProjectCard() {
+export default function ProjectCard({user}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
+    <Card variant='outlined' elevation={0}  sx={{ maxWidth: 345 }}>
+      {/* <CardMedia
         component="img"
         alt="green iguana"
         height="140"
         image="/static/images/cards/contemplative-reptile.jpg"
-      />
+      /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Project Name
+          {user.name}
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          About the project.
+          {user.username}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Github</Button>
+        <Button variant='outlined' size="small">Github</Button>
         <Button size="small">Link</Button>
       </CardActions>
     </Card>

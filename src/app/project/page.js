@@ -7,8 +7,31 @@ import NextLink from 'next/link';
 import Grid from '@mui/material/Grid';
 import ProjectCard from '@/components/Card/ProjectCard';
 
+const users = [
+  {
+    id: 1,
+    name: 'Leanne Graham',
+    username: 'Bret',
+},
+{
+    id: 2,
+    name: 'Adam Graham',
+    username: 'Adam',
+},
+    {
+        id: 3,
+        name: 'Eve Graham',
+        username: 'Eve',
+    }, 
+    {
+    id: 4,
+    name: 'Obiora Nwude',
+    username: 'Obi',
+}
+]; 
+
 export default function About() {
-    return (
+    return (        
         <Container maxWidth="lg">
             <Box
                 sx={{
@@ -26,27 +49,14 @@ export default function About() {
 
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={2} minHeight={160}>
-                        <Grid display="flex" justifyContent="center" alignItems="center" size="grow">
-                            <ProjectCard />
-                        </Grid>
-                        <Grid display="flex" justifyContent="center" alignItems="center">
-                            <ProjectCard />
-                        </Grid>
-                        <Grid display="flex" justifyContent="center" alignItems="center" size="grow">
-                            <ProjectCard />
-                        </Grid>
+                        {users.map((user) => (
+                           <Grid key={user.id} display="flex" justifyContent="center" alignItems="center" size="grow">
+                                    <ProjectCard user={user} />
+                                </Grid>
+                      ))}
                     </Grid>
-                    <Grid container spacing={2} minHeight={160}>
-                        <Grid display="flex" justifyContent="center" alignItems="center" size="grow">
-                            <ProjectCard />
-                        </Grid>
-                        <Grid display="flex" justifyContent="center" alignItems="center">
-                            <ProjectCard />
-                        </Grid>
-                        <Grid display="flex" justifyContent="center" alignItems="center" size="grow">
-                            <ProjectCard />
-                        </Grid>
-                    </Grid>
+
+                   
                 </Box>
             </Box>
         </Container>
